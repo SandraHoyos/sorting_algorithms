@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- *selection_sot - sorts through selection
+ *selection_sort - sorts through selection
  *@array: array to sort
  *@size: size of the array
  */
@@ -9,7 +9,7 @@
 void selection_sort(int *array, size_t size)
 {
 	int flag = 0, temp = 0, site = 0;
-	size_t i,j;
+	size_t i, j;
 
 	if (!array)
 		return;
@@ -19,7 +19,7 @@ void selection_sort(int *array, size_t size)
 		temp = 0;
 		for (j = i + 1; j < size; j++)
 		{
-			if(!flag && array[j] < array[i])
+			if (!flag && array[j] < array[i])
 			{
 				temp = array[j];
 				site = j;
@@ -35,7 +35,7 @@ void selection_sort(int *array, size_t size)
 
 		{
 			array[site] = array[i];
-			array[i] = tmp;
+			array[i] = temp;
 			print_array(array, size);
 		}
 	}
